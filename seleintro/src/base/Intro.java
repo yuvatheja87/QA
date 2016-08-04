@@ -15,7 +15,7 @@ public class Intro {
 		driver1.get("http://www.google.com");
 */		System.out.println(driver.getTitle());   		// to get title of url
 	//	System.out.println(driver.getPageSource());  	//to get page source
-		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getCurrentUrl());		// to get current url
 
 
 	}
