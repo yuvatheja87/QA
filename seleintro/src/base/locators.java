@@ -7,7 +7,7 @@ public class locators {
 
 	public static void main(String[] args) {
 		WebDriver driver = new FirefoxDriver();
-
+		driver.get("http://facebook.com");
 	}
 
 }
