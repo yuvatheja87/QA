@@ -10,7 +10,16 @@ public class alerts {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://www.javascripter.net/faq/alert.htm");
 		driver.findElement(By.xpath("//input[@value='Try it now']")).click();
-		driver.switchTo().alert().accept();
+//		System.out.println(driver.switchTo().alert().getText());
+//		driver.switchTo().alert().sendKeys("sicubiasubciausb");		//to enter text in popup
+		if(driver.switchTo().alert().getText().equals("Hello from JavaScript!"))
+			driver.switchTo().alert().accept();   		// to accept or positive response
+		else
+			driver.switchTo().alert().dismiss();		// to give negative response
+		
+		
+		driver.close();
+		
 	}
 
 }
