@@ -10,14 +10,6 @@ public class Makemytrip {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://us.makemytrip.com/");
 		driver.findElement(By.xpath(".//*[@id='trip_type']/label[2]")).click();
-//		System.out.println("Round trip");
-//		System.out.println(driver.findElement(By.xpath(".//*[@id='top_content']/div[2]/div[2]/div[2]/div[1]/div[7]/span/span[4]/a")).isDisplayed());
-//		driver.findElement(By.xpath(".//*[@id='trip_type']/label[3]")).click();
-//		System.out.println("multicity trip");
-//		System.out.println(driver.findElement(By.xpath(".//*[@id='top_content']/div[2]/div[2]/div[2]/div[1]/div[7]/span/span[4]/a")).isDisplayed());
-//		driver.findElement(By.xpath(".//*[@id='trip_type']/label[1]")).click();
-//		System.out.println("oneway trip");
-//		System.out.println(driver.findElement(By.xpath(".//*[@id='top_content']/div[2]/div[2]/div[2]/div[1]/div[7]/span/span[4]/a")).isDisplayed());
 		driver.findElement(By.xpath(".//*[@id='top_content']/div[2]/div[2]/div[2]/div[1]/div[5]/div[2]/span[1]/a")).click();
 		Thread.sleep(1500L);
 		int count1=driver.findElements(By.xpath(".//*[@class='ui-menu-item']")).size();
@@ -29,7 +21,7 @@ public class Makemytrip {
 			}	
 		}
 		driver.findElement(By.xpath(".//*[@id='top_content']/div[2]/div[2]/div[2]/div[1]/div[5]/div[3]/span/a")).click();
-		Thread.sleep(1500L);
+		Thread.sleep(1000L);
 		int count2=driver.findElements(By.xpath(".//*[@id='ui-id-6']/li")).size();
 		for(int i=0;i<count2;i++){
 			String str1=driver.findElements(By.xpath(".//*[@id='ui-id-6']/li/a")).get(i).getAttribute("innerText");
